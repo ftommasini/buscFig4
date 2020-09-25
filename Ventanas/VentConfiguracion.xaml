@@ -1,0 +1,222 @@
+﻿<Window x:Class="WpfApplication1.VentConfiguracion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="550" Width="700" VerticalAlignment="Center" HorizontalAlignment="Center" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" IsHitTestVisible="True" IsTabStop="True" Title="Buscando Figuras 4.0 - Configuración">
+    <TabControl Height="511" Name="tabControl1" Width="678" IsHitTestVisible="True" >
+
+        <TabItem Header="conf1" Name="conf1"  IsSelected="True">
+            <Grid>
+                <Label Content="Bienvenidos a Buscando Figuras" FontSize="32" Height="72" HorizontalAlignment="Left" Margin="119,0,0,0" Name="MensajeBienvenida" VerticalAlignment="Top" Width="467" />
+                <Button BorderThickness="2" Content="Configuración MANUAL &gt;&gt;" FontSize="13" Height="45" HorizontalAlignment="Right" Margin="0,432,6,0" Name="Sig1" VerticalAlignment="Top" Width="328" Click="Sig1_Click" />
+                <Button Content="CARGAR CONFIGURACIÓN (Próximamente)" HorizontalAlignment="Left" Margin="171,388,0,0" VerticalAlignment="Top" Width="347" Height="31" FontSize="16" IsEnabled="False"/>
+                <Image x:Name="LogoImagen" HorizontalAlignment="Left" Height="274" Margin="95,57,0,0" VerticalAlignment="Top" Width="508" Source="/WpfApplication1;component/Resources/Logo.png"/>
+                <Label Content="Versión 4.1.0 (Beta - de Prueba)" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="206,331,0,0" x:Name="MensajeBienvenida_Copy" VerticalAlignment="Top" Width="288" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="conf2" Name="conf2" >
+            <Grid>
+                <Button BorderThickness="2" Content="Siguiente &gt;&gt;" FontSize="13" Height="23" HorizontalAlignment="Right" Margin="0,454,6,0" Name="Sig2" VerticalAlignment="Top" Width="96" Click="Sig2_Click" />
+                <Button BorderThickness="2" Content="&lt;&lt; Atras" FontSize="13" Height="23" HorizontalAlignment="Left" Margin="468,454,0,0" Name="Atr2" VerticalAlignment="Top" Width="96" Click="Atr2_Click" />
+                <Label Content="Configuraciones Iniciales" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="10,10,0,0" Name="labelConfig" VerticalAlignment="Top" Width="231" />
+                <Rectangle Height="56" HorizontalAlignment="Left" Margin="33,125,0,0" Name="rectangle3" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="Duración de Tiempo de prueba:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="58,137,0,0" Name="labelDuracion" VerticalAlignment="Top" Width="201" />
+                <RadioButton Content="Límite de Tiempo" Height="16" HorizontalAlignment="Right" Margin="0,144,163,0" Name="radioConLim" VerticalAlignment="Top" IsChecked="True" GroupName="duracion"  />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="531,142,0,0" Name="textBoxSegundos" VerticalAlignment="Top" Width="38" Text="60" />
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="572,143,0,0" Name="textBlockseg" Text="segundos" VerticalAlignment="Top" Width="56" />
+                <RadioButton Content="Sin Límite" Height="16" HorizontalAlignment="Left" Margin="292,144,0,0" Name="radioButton1" VerticalAlignment="Top" GroupName="duracion"   />
+                <Rectangle Height="56" HorizontalAlignment="Left" Margin="33,194,0,0" Name="rectangle4" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="Orden de Aparición de Figuras:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="58,206,0,0" Name="labelOrden" VerticalAlignment="Top" Width="201" />
+                <RadioButton Content="Azar" GroupName="orden" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="292,213,0,0" Name="radioAzar" VerticalAlignment="Top" />
+                <RadioButton Content="Lista Manual (Se ordena más adelante)" GroupName="orden" Height="16" HorizontalAlignment="Right" Margin="0,213,51,0" Name="radioLista" VerticalAlignment="Top" IsChecked="True" />
+                <Rectangle Height="56" HorizontalAlignment="Left" Margin="33,264,0,0" x:Name="rectangle4_Copy" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="Feedback sonoro de Respuesta:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="58,274,0,0" x:Name="labelFeedback" VerticalAlignment="Top" Width="201" />
+                <RadioButton Content="Activado" GroupName="Feed1" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="292,283,0,0" x:Name="radioFeed_1_Act" VerticalAlignment="Top"  />
+                <RadioButton Content="Desactivado" GroupName="Feed1" Height="16" HorizontalAlignment="Right" Margin="0,283,191,0" x:Name="radioFeed_1_Des" VerticalAlignment="Top" IsChecked="True" />
+                <Rectangle Height="84" HorizontalAlignment="Left" Margin="33,333,0,0" x:Name="rectangle4_Copy1" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <RadioButton Content="Activado" GroupName="Feed2" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="292,364,0,0" x:Name="radioFeed_2_Act" VerticalAlignment="Top" />
+                <RadioButton Content="Desactivado" GroupName="Feed2" Height="16" HorizontalAlignment="Right" Margin="0,364,191,0" x:Name="radioFeed_2_Des" VerticalAlignment="Top" IsChecked="False" />
+                <Label Content="(Correcto / Incorrecto)" FontSize="10" Height="28" HorizontalAlignment="Left" Margin="58,289,0,0" x:Name="labelFeedback_d" VerticalAlignment="Top" Width="201" />
+                <Label Content="Feedback sonoro de Estado:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="58,340,0,0" x:Name="labelFeedback2" VerticalAlignment="Top" Width="201" />
+                <Label Content="(Inicio y Final de explor. / &#xD;&#xA;Elección Neutra - se activa en el caso de que el &#xD;&#xA;Feedback sonoro de Respuesta esté desactivado -)" FontSize="10" Height="52" HorizontalAlignment="Left" Margin="57,355,0,0" x:Name="labelFeedback2_d" VerticalAlignment="Top" Width="229" />
+                <Rectangle Height="56" HorizontalAlignment="Left" Margin="33,55,0,0" x:Name="rectangle4_Copy2" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="FAMILIARIZACIÓN:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="58,68,0,0" x:Name="labelOrden_Copy" VerticalAlignment="Top" Width="201" />
+                <RadioButton Content="Activada" GroupName="Familiarizacion" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="292,75,0,0" x:Name="radioFam_Act" VerticalAlignment="Top" />
+                <RadioButton Content="Desactivada" GroupName="Familiarizacion" Height="16" HorizontalAlignment="Right" Margin="0,74,191,0" x:Name="radioFam_Des" VerticalAlignment="Top" />
+                <TextBlock HorizontalAlignment="Left" Margin="371,34,0,0" TextWrapping="Wrap" Text="Se debe usar Resolución de Pantalla 1366x768" VerticalAlignment="Top" Width="264" FontWeight="Bold" TextDecorations="{x:Null}" Background="#FFF9DFDF"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="conf3" Name="conf3" >
+            <Grid>
+                <Button BorderThickness="2" Content="Siguiente &gt;&gt;" FontSize="13" Height="23" HorizontalAlignment="Right" Margin="0,454,6,0" Name="Sig3" VerticalAlignment="Top" Width="96" Click="Sig3_Click" />
+                <Button BorderThickness="2" Content="&lt;&lt; Atras" FontSize="13" Height="23" HorizontalAlignment="Left" Margin="468,454,0,0" Name="Atr3" VerticalAlignment="Top" Width="96" Click="Atr3_Click" />
+                <Label Content="Configuraciones Iniciales" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="10,10,0,0" Name="labelConfInic" VerticalAlignment="Top" Width="231" />
+                <Rectangle Height="223" HorizontalAlignment="Left" Margin="33,56,0,0" Name="rectangle7" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="Cantidad de Figuras:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="68,68,0,0" Name="label5" VerticalAlignment="Top" Width="201" />
+                <Rectangle Height="56" HorizontalAlignment="Left" Margin="33,296,0,0" Name="rectangle8" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="Cantidad de Repeticiones por Figura:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="68,308,0,0" Name="label6" VerticalAlignment="Top" Width="227" />
+                <DockPanel VerticalAlignment="Center" Margin="220,72,243,387"></DockPanel>
+                <Button Content="Editar Figuras" Height="32" HorizontalAlignment="Left" Margin="485,68,0,0" Name="buttonEdic" VerticalAlignment="Top" Width="114" BorderThickness="3" FontSize="14" Click="buttonEdic_Click" />
+                <DockPanel Margin="355,312,108,147" VerticalAlignment="Center">
+                    <TextBox DockPanel.Dock="Right" Text="{Binding ElementName=slRepetFigura, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="40" Name="txtcant2" />
+                    <Slider IsSnapToTickEnabled="True" Maximum="6" Minimum="1" Name="slRepetFigura" TickFrequency="1" TickPlacement="BottomRight" Width="154" Value="4" />
+                </DockPanel>
+                <DockPanel Margin="355,385,108,74" VerticalAlignment="Center"/>
+                <StackPanel Background="#09000019" Height="60" HorizontalAlignment="Left" Margin="68,111,0,0" Name="Mini1" VerticalAlignment="Top" Width="90" />
+                <StackPanel Background="#09000019" Height="60" HorizontalAlignment="Right" Margin="0,111,368,0" Name="Mini2" VerticalAlignment="Top" Width="90" Visibility="Visible"></StackPanel>
+                <StackPanel Background="#09000019" Height="60" Name="Mini3" Width="90" Margin="358,111,224,312" Visibility="Visible" />
+                <StackPanel Background="#09000019" Height="60" Name="Mini4" Width="90" Margin="499,111,83,312" Visibility="Visible"></StackPanel>
+                <StackPanel Background="#09000019" Height="60" Name="Mini8" Width="90" Margin="499,195,83,228" Visibility="Visible" />
+                <StackPanel Background="#09000019" Height="60" Name="Mini7" Width="90" Margin="358,195,224,228" Visibility="Visible" />
+                <StackPanel Background="#09000019" Height="60" Name="Mini6" Width="90" Margin="214,195,368,228" Visibility="Visible" />
+                <StackPanel Background="#09000019" Height="60" Name="Mini5" Width="90" Margin="68,195,514,228" Visibility="Visible" />
+
+                <Slider HorizontalAlignment="Left" Margin="229,76,0,0" Name="slCantFig" VerticalAlignment="Top" Width="152" IsSnapToTickEnabled="True" Maximum="8" SelectionEnd="1" SelectionStart="1" TickFrequency="1" TickPlacement="BottomRight" Value="4" Minimum="2" ValueChanged="slCantFig_ValueChanged" />
+                <TextBox Height="24" HorizontalAlignment="Left" Margin="387,0,0,383" Name="textBox5" VerticalAlignment="Bottom" Width="30" Text="{Binding ElementName=slCantFig, Path=Value}" HorizontalContentAlignment="Center" />
+                <Label Content="Nombre" FontSize="11" Height="28" Margin="68,165,0,0" Name="n1" VerticalAlignment="Top" Width="90" HorizontalAlignment="Left" HorizontalContentAlignment="Center" />
+                <Label Content="Nombre" FontSize="11" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="214,165,0,0" Name="n2" VerticalAlignment="Top" Width="90" />
+                <Label Content="Nombre" FontSize="11" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="68,249,0,0" Name="n5" VerticalAlignment="Top" Width="90" />
+                <Label Content="Nombre" FontSize="11" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="214,249,0,0" Name="n6" VerticalAlignment="Top" Width="90" />
+                <Label Content="Nombre" FontSize="11" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="358,165,0,0" Name="n3" VerticalAlignment="Top" Width="90" />
+                <Label Content="Nombre" FontSize="11" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="499,165,0,0" Name="n4" VerticalAlignment="Top" Width="90" />
+                <Label Content="Nombre" FontSize="11" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="358,249,0,0" Name="n7" VerticalAlignment="Top" Width="90" />
+                <Label Content="Nombre" FontSize="11" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="499,249,0,0" Name="n8" VerticalAlignment="Top" Width="90" />
+                <Rectangle Height="56" HorizontalAlignment="Left" Margin="33,368,0,0" x:Name="rectangle4_Copy3" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="Preguntas Sonoras:" FontSize="13" Height="28" HorizontalAlignment="Left" Margin="58,380,0,0" x:Name="labelPreguntas" VerticalAlignment="Top" Width="201" />
+                <RadioButton Content="Activado" GroupName="Pregunt" Height="16" HorizontalAlignment="Left" IsChecked="True" Margin="292,387,0,0" x:Name="radioPreg_Act" VerticalAlignment="Top"  />
+                <RadioButton Content="Desactivado" GroupName="Pregunt" Height="16" HorizontalAlignment="Right" Margin="0,387,191,0" x:Name="radioPreg_Des" VerticalAlignment="Top" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="conf4" x:Name="conf4" Margin="-2,0" IsSelected="True" >
+            <Grid>
+                <Label Content="Orden de aparición FAMILIARIZACIÓN" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="label2" VerticalAlignment="Top" Width="353" />
+                <Rectangle Height="359" HorizontalAlignment="Left" Margin="169,60,0,0" x:Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="345" />
+                <Button BorderThickness="2" Content="Siguiente &gt;&gt;" FontSize="13" Height="23" HorizontalAlignment="Right" Margin="0,454,6,0" x:Name="Sig4" VerticalAlignment="Top" Width="96" Click="Sig4_Click" />
+                <Button BorderThickness="2" Content="&lt;&lt; Atras" FontSize="13" Height="23" HorizontalAlignment="Left" Margin="468,454,0,0" x:Name="Atr4" VerticalAlignment="Top" Width="96" Click="Atr4_Click" />
+
+
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,93,273,0" x:Name="comboBox1fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="0" SelectionChanged="comboBoxFamilia_SelectionChanged" />
+                <Label Content="1:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="265,89,0,0" x:Name="l37" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,122,273,0" x:Name="comboBox2fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="1" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="2:" FontSize="15" HorizontalAlignment="Left" Margin="265,118,0,334" x:Name="l38" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,151,273,0" x:Name="comboBox3fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="2" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="3:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="265,147,0,0" x:Name="l39" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,180,273,0" x:Name="comboBox4fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="3" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="4:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="265,176,0,0" x:Name="l40" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,209,273,0" x:Name="comboBox5fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="4" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="5:" FontSize="15" HorizontalAlignment="Left" Margin="265,205,0,247" x:Name="l41" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,238,273,0" x:Name="comboBox6fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="5" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="6:" FontSize="15" HorizontalAlignment="Left" Margin="265,234,0,0" x:Name="l42" Width="24" Height="31" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,267,273,0" x:Name="comboBox7fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="6" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="7:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="265,263,0,0" x:Name="l43" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,296,273,0" x:Name="comboBox8fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="7" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="8:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="265,292,0,0" x:Name="l44" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,325,273,0" x:Name="comboBox9fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="8" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="9:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="265,321,0,0" x:Name="l45" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,354,273,0" x:Name="comboBox10fam" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBoxFamilia_PreviewMouseDown" Tag="9" SelectionChanged="comboBoxFamilia_SelectionChanged"/>
+                <Label Content="10:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="257,350,0,0" x:Name="l46" VerticalAlignment="Top" Width="33" />
+                <Button Content="Limpiar todo" Height="25" HorizontalAlignment="Left" Margin="70,435,0,0" x:Name="buttonLimpiarFamilia" VerticalAlignment="Top" Width="137" Click="buttonLimpiarFamilia_Click" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="conf5" x:Name="conf5">
+            <Grid>
+                <Label Content="Orden de aparición de Figuras" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label3" VerticalAlignment="Top" Width="294" />
+                <Rectangle Height="372" HorizontalAlignment="Left" Margin="33,56,0,0" Name="rectangle6" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Button BorderThickness="2" Content="Siguiente &gt;&gt;" FontSize="13" Height="23" HorizontalAlignment="Right" Margin="0,454,6,0" x:Name="Sig5" VerticalAlignment="Top" Width="96" Click="Sig5_Click" />
+                <Button BorderThickness="2" Content="&lt;&lt; Atras" FontSize="13" Height="23" HorizontalAlignment="Left" Margin="468,454,0,0" x:Name="Atr5" VerticalAlignment="Top" Width="96" Click="Atr5_Click" />
+
+
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,66,465,0" Name="comboBox1" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="0" SelectionChanged="comboBox_SelectionChanged" />
+                <Label Content="1:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="73,62,0,0" Name="l1" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,95,465,0" Name="comboBox2" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="1" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="2:" FontSize="15" HorizontalAlignment="Left" Margin="73,91,0,361" Name="l2" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,124,465,0" Name="comboBox3" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="2" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="3:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="73,120,0,0" Name="l3" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,153,465,0" Name="comboBox4" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="3" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="4:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="73,149,0,0" Name="l4" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,182,465,0" Name="comboBox5" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="4" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="5:" FontSize="15" HorizontalAlignment="Left" Margin="73,178,0,274" Name="l5" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,211,465,0" Name="comboBox6" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="5" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="6:" FontSize="15" HorizontalAlignment="Left" Margin="73,207,0,0" Name="l6" Width="24" Height="31" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,240,465,0" Name="comboBox7" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="6" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="7:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="73,236,0,0" Name="l7" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,269,465,0" Name="comboBox8" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="7" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="8:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="73,265,0,0" Name="l8" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,298,465,0" Name="comboBox9" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="8" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="9:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="73,294,0,0" Name="l9" VerticalAlignment="Top" Width="24" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,327,465,0" Name="comboBox10" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="9" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="10:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="65,323,0,0" Name="l10" VerticalAlignment="Top" Width="33" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,356,465,0" Name="comboBox11" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="10" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="11:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="65,352,0,0" Name="l11" VerticalAlignment="Top" Width="33" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,385,465,0" Name="comboBox12" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="11" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="12:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="65,381,0,0" Name="l12" VerticalAlignment="Top" Width="33" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,66,263,0" Name="comboBox13" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="12" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="13:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,62,0,0" Name="l13" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,95,263,0" Name="comboBox14" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="13" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="14:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,91,0,0" Name="l14" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,124,263,0" Name="comboBox15" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="14" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="15:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,120,0,0" Name="l15" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,153,263,0" Name="comboBox16" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="15" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="16:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,149,0,0" Name="l16" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,182,263,0" Name="comboBox17" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="16" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="17:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,178,0,0" Name="l17" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,211,263,0" Name="comboBox18" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="17" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="18:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,207,0,0" Name="l18" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,240,263,0" Name="comboBox19" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="18" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="19:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,236,0,0" Name="l19" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,269,263,0" Name="comboBox20" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="19" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="20:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,265,0,0" Name="l20" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,298,263,0" Name="comboBox21" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="20" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="21:" FontSize="15" Height="31" Margin="268,294,375,0" Name="l21" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,327,263,0" Name="comboBox22" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="21" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="22:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,323,0,0" Name="l22" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,356,263,0" Name="comboBox23" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="22" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="23:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,352,0,0" Name="l23" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,385,263,0" Name="comboBox24" VerticalAlignment="Top" Width="106" PreviewMouseDown="comboBox_PreviewMouseDown" Tag="23" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="24:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="268,381,0,0" Name="l24" VerticalAlignment="Top" Width="29" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,66,74,0" Name="comboBox25"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="24" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="25:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,62,0,0" Name="l25" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,95,74,0" Name="comboBox26"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="25" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="26:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,91,0,0" Name="l26" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,124,74,0" Name="comboBox27"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="26" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="27:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,120,0,0" Name="l27" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,153,74,0" Name="comboBox28"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="27" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="28:" FontSize="15" HorizontalAlignment="Left" Margin="458,149,0,303" Name="l28" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,182,74,0" Name="comboBox29"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="28" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="29:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,178,0,0" Name="l29" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,211,74,0" Name="comboBox30"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="29" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="30:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,207,0,0" Name="l30" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,240,74,0" Name="comboBox31"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="30" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="31:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,236,0,0" Name="l31" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,269,74,0" Name="comboBox32"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="31" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="32:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,265,0,0" Name="l32" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,298,74,0" Name="comboBox33"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="32" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="33:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,294,0,0" Name="l33" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,327,74,0" Name="comboBox34"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="33" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="34:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,323,0,0" Name="l34" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,356,74,0" Name="comboBox35"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="34" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="35:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,352,0,0" Name="l35" VerticalAlignment="Top" Width="32" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,385,74,0" Name="comboBox36"  VerticalAlignment="Top" Width="106"  PreviewMouseDown="comboBox_PreviewMouseDown" Tag="35" SelectionChanged="comboBox_SelectionChanged"/>
+                <Label Content="36:" FontSize="15" Height="31" HorizontalAlignment="Left" Margin="458,381,0,0" Name="l36" VerticalAlignment="Top" Width="32" />
+                <Button Content="Limpiar todo" Height="25" HorizontalAlignment="Left" Margin="70,435,0,0" Name="buttonLimpiar" VerticalAlignment="Top" Width="137" Click="buttonLimpiar_Click" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="conf6" x:Name="conf6">
+            <Grid>
+                <Rectangle Height="100" HorizontalAlignment="Left" Margin="33,344,0,0" x:Name="rectangle6_Copy2" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Rectangle Height="125" HorizontalAlignment="Left" Margin="33,208,0,0" x:Name="rectangle6_Copy1" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Rectangle Height="182" HorizontalAlignment="Left" Margin="33,16,0,0" x:Name="rectangle6_Copy" Stroke="Black" VerticalAlignment="Top" Width="602" />
+                <Label Content="¿Desea GUARDAR la nueva Configuración?" FontSize="23" Height="52" HorizontalAlignment="Left" Margin="115,351,0,0" x:Name="label7" VerticalAlignment="Top" Width="447" />
+                <Button Content="GUARDAR Nueva Configuración (Próximamente)" Height="35" HorizontalAlignment="Left" Margin="92,395,0,0" x:Name="button1" VerticalAlignment="Top" Width="489" FontSize="16" IsEnabled="False" />
+                <Button BorderThickness="2" Content="Finalizar" FontSize="13" Height="23" HorizontalAlignment="Right" Margin="0,454,6,0" x:Name="Finalizar" VerticalAlignment="Top" Width="96" Click="Finalizar_Click" IsHitTestVisible="True" />
+                <Button BorderThickness="2" Content="&lt;&lt; Atras" FontSize="13" Height="23" HorizontalAlignment="Left" Margin="468,454,0,0" x:Name="Atr6" VerticalAlignment="Top" Width="96" Click="Atr6_Click" />
+                <Label Content="Seleccione el directorio donde se guardarán los datos del ensayo:" Height="28" HorizontalAlignment="Left" Margin="49,213,0,0" x:Name="Label_directorio" VerticalAlignment="Top" Width="538" />
+                <Button Content="Elegir Directorio..." Height="26" HorizontalAlignment="Left" Margin="49,239,0,0" x:Name="buttonDirectorio" VerticalAlignment="Top" Width="126" Click="buttonDirectorio_Click" />
+                <Label BorderBrush="#72000000" BorderThickness="1" Content="Label" Height="26" HorizontalAlignment="Right" Margin="0,239,53,0" x:Name="LabelDirectorio" VerticalAlignment="Top" Width="436" />
+                <Label Background="#A900D9BB" Content="Info Directorio" Height="26" HorizontalAlignment="Left" Margin="49,271,0,0" x:Name="LabelEstadoDirectorio" VerticalAlignment="Top" Width="570" FontStyle="Normal" FontFamily="Lucida Fax" HorizontalContentAlignment="Center" />
+                <Label Content="El Sujeto de esta prueba será el:" Height="36" HorizontalAlignment="Left" Margin="96,22,0,0" x:Name="Label1_Copy" VerticalAlignment="Top" Width="368" FontSize="18" />
+                <Button Content="SUJETO 1" Height="48" HorizontalAlignment="Left" Margin="127,58,0,0" x:Name="button_Sujeto" VerticalAlignment="Top" Width="431" FontSize="34" FontFamily="Tahoma" FontWeight="Bold" Click="button_Sujeto_Click" />
+                <TextBox HorizontalAlignment="Left" Height="67" Margin="57,117,0,0" TextWrapping="Wrap" Text="ATENCIÓN IMPORTANTE: &#xA;- Se debe finalizar primero la Configuración en el programa del Sujeto 1, porque este sujeto creará la nueva carpeta donde se guardarán todos los datos de la prueba&#xA;- Si este es el programa del Sujeto 1, por favor seleccione directorio y luego presione en &quot;Finalizar&quot;. Luego complete los Datos personales de los dos sujetos (esto solo se pedirá en el Sujeto 1) y cuando estemos en la ventana que dice &quot;Esperando conexión del Sujeto 2&quot; ya estamos listos para elegir el directorio para el Sujeto 2 (ya que antes no había sido creado).&#xA;- Compruebe que ambos sujetos tengan como selección el mismo número de prueba (misma carpeta de guardado)&#xA;- Para que este programa grabe datos correctamente las dos computadoras deben estar en red compartiendo alguna carpeta. Las dos computadoras tienen que tener acceso a esa carpeta." VerticalAlignment="Top" Width="560" VerticalScrollBarVisibility="Visible"/>
+                <Label Background="#A963D900" Content="PRUEBA N° XX" Height="26" HorizontalAlignment="Left" Margin="145,302,0,0" x:Name="Label_nombre" VerticalAlignment="Top" Width="373" FontStyle="Normal" FontFamily="Global Sans Serif" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold" />
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

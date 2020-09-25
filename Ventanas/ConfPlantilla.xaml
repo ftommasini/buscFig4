@@ -1,0 +1,9 @@
+﻿<Window x:Class="WpfApplication1.ConfPlantilla"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ConfPlantilla" Height="550" Width="700" VerticalAlignment="Center" HorizontalAlignment="Center" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Siguiente &gt;&gt;" Height="23" HorizontalAlignment="Right" Margin="0,476,12,0" Name="Siguiente" VerticalAlignment="Top" Width="96" BorderThickness="2" FontSize="13"  />
+        <Button BorderThickness="2" Content="&lt;&lt; Atras" FontSize="13" Height="23" HorizontalAlignment="Left" Margin="468,476,0,0" Name="Atras" VerticalAlignment="Top" Width="96" />
+    </Grid>
+</Window>

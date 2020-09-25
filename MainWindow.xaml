@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Buscando Figuras 4" Height="768" Width="1360" WindowState="Maximized" KeyDown="Window_KeyDown" WindowStyle="None">
+
+    <Grid>
+        <Polyline Points="" Stroke="Black" StrokeThickness="1" Margin="226,68,226,69" x:Name="polylineObj" Fill="#ECA060" MouseEnter="polylineObj_MouseEnter" MouseLeave="polylineObj_MouseLeave" Width="900" Height="600" />
+        <Label x:Name="label_ID_fijo" Content="ID de Prueba: " HorizontalAlignment="Left" Margin="10,586,0,0" VerticalAlignment="Top" Height="42" Width="197" FontSize="27" FontWeight="Bold"/>
+        <Label x:Name="label_Estado" Content="Esperando Sincronización..." HorizontalAlignment="Left" Margin="180,24,0,0" VerticalAlignment="Top" Height="58" Width="1154" FontSize="36" Background="#FFE4EC95" BorderBrush="Black"/>
+        <Label x:Name="label_IDEnsayo_Fijo" Content="ID del Ensayo: " HorizontalAlignment="Left" Margin="10,633,0,0" VerticalAlignment="Top" Height="42" Width="197" FontSize="27" FontWeight="Bold"/>
+        <Label x:Name="label_ID" Content="xx" HorizontalAlignment="Left" Margin="197,586,0,0" VerticalAlignment="Top" Height="42" Width="197" FontSize="27"/>
+        <Label x:Name="label_IDEnsayo" Content="xxxxx" HorizontalAlignment="Left" Margin="197,633,0,0" VerticalAlignment="Top" Height="42" Width="197" FontSize="27"/>
+        <StackPanel x:Name="Stack_info" HorizontalAlignment="Left" Height="317" Margin="1131,211,0,0" VerticalAlignment="Top" Width="211" Background="#FFD6C0F9">
+            <Label x:Name="Panel_Sujeto" Content="Sujeto:" FontSize="15" BorderBrush="Black" BorderThickness="1,1,1,0.5"/>
+            <Label x:Name="Panel_Ensayo" Content="Ensayo:" FontSize="15" BorderBrush="Black" BorderThickness="1"/>
+            <Label x:Name="Panel_FExplor" Content="Figura Explorada:" FontSize="15" BorderBrush="Black" BorderThickness="1,0.5"/>
+            <Label x:Name="Panel_FEleg" Content="Figura Elegida:" FontSize="15" BorderBrush="Black" BorderThickness="1"/>
+            <Label x:Name="Panel_TExplor" Content="Tiempo Exploracion:" FontSize="15" BorderBrush="Black" BorderThickness="1,0.5"/>
+            <Label x:Name="Panel_TRespuesta" Content="Tiempo Respuesta:" FontSize="15" BorderBrush="Black" BorderThickness="1"/>
+            <Label x:Name="Panel_Result" Content="Resultado:" FontSize="15" BorderBrush="Black" BorderThickness="1,0.5"/>
+            <Label x:Name="Panel_p1" Content="Pregunta 1:     (Visualizacion " FontSize="15" BorderBrush="Black" BorderThickness="1"/>
+            <Label x:Name="Panel_p2" Content="Pregunta 2:       todavía no" FontSize="15" BorderBrush="Black" BorderThickness="1,0.5,1,1"/>
+            <Label x:Name="Panel_p3" Content="Pregunta 3:       disponible)" FontSize="15" BorderBrush="Black" BorderThickness="1,0.5,1,1"/>
+        </StackPanel>
+        <Rectangle Fill="#0AFFFFFF" HorizontalAlignment="Left" Height="241" Margin="22,250,0,0" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="157"/>
+        <TextBlock HorizontalAlignment="Left" Margin="39,264,0,0" TextWrapping="Wrap" Text="TECLAS:" VerticalAlignment="Top" Height="25" Width="87" FontWeight="Bold" FontSize="16"/>
+        <TextBlock x:Name="textTeclas" HorizontalAlignment="Left" Margin="39,294,0,0" TextWrapping="Wrap" Text="- 1er Figura: A    - 2da Figura: S     - 3ra Figura: D     - 4ta Figura: F     - 5ta Figura: G     - 6ta Figura: H" VerticalAlignment="Top" Height="187" Width="128" FontSize="18"/>
+        <Label Content="Estado:" HorizontalAlignment="Left" Margin="39,24,0,0" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.497,0.538" Height="58" FontSize="36" FontWeight="Bold" Background="#FFE4EC95" BorderBrush="Black" OpacityMask="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="58" Margin="39,24,0,0" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="1295"/>
+        <Label x:Name="label_SalirSin" Content="Salir sin finalizar: ALT + F4" HorizontalAlignment="Left" Margin="1010,707,0,0" VerticalAlignment="Top" Height="43" Width="332" FontSize="27"/>
+        <Button x:Name="Button_Salir" Content="PRESIONE AQUI PARA SALIR" HorizontalAlignment="Left" Margin="658,707,0,0" VerticalAlignment="Top" Width="324" Height="39" FontSize="18" FontWeight="Bold" Click="Button_Salir_Click"/>
+        <MediaElement x:Name="SonidoRosa" HorizontalAlignment="Left" Height="71" Margin="1346,-64,-90,0" VerticalAlignment="Top" Width="96"/>
+    </Grid>
+</Window>

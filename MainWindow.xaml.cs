@@ -572,7 +572,6 @@ namespace WpfApplication1
             f[0].AgregarPunto(4, 250, 100);
             f[0].FinalizarFigura(5);
             f[0].EditarColor("#0521D4");
-            //f[0].EditarColor("#FFFFFF");
 
             // Figura 2 - Triangulo      
             f[1] = new ClaseFigura();
@@ -584,7 +583,6 @@ namespace WpfApplication1
             f[1].AgregarPunto(3, 450, 100);
             f[1].FinalizarFigura(4);
             f[1].EditarColor("#9EF338");
-            //f[1].EditarColor("#FFFFFF");
 
             // Figura 3 - Rectangulo      
             f[2] = new ClaseFigura();
@@ -597,7 +595,6 @@ namespace WpfApplication1
             f[2].AgregarPunto(4, 250, 240);
             f[2].FinalizarFigura(5);
             f[2].EditarColor("#D50019");
-            //f[2].EditarColor("#FFFFFF");
 
             // Figura 4 - Triangulito      
             f[3] = new ClaseFigura();
@@ -609,7 +606,6 @@ namespace WpfApplication1
             f[3].AgregarPunto(3, 450, 100);
             f[3].FinalizarFigura(4);
             f[3].EditarColor("#E86308");
-            //f[3].EditarColor("#FFFFFF");
 
             // Figura 5 - Rombo      
             f[4] = new ClaseFigura();
@@ -622,7 +618,7 @@ namespace WpfApplication1
             f[4].AgregarPunto(4, 450, 100);
             f[4].FinalizarFigura(5);
             f[4].EditarColor("#A10019");
-            //f[4].EditarColor("#FFFFFF");
+
 
             // Figura 6 - Estrella      
             f[5] = new ClaseFigura();
@@ -641,7 +637,7 @@ namespace WpfApplication1
             f[5].AgregarPunto(10, 450, 80);          
             f[5].FinalizarFigura(11);
             f[5].EditarColor("#BDBD20");
-            //f[5].EditarColor("#FFFFFF");
+
 
             // Figura 7 - Elefante      
             f[6] = new ClaseFigura();
@@ -659,9 +655,10 @@ namespace WpfApplication1
             f[6].AgregarPunto(9, 160, 370);
             f[6].AgregarPunto(10, 190, 230);
             f[6].AgregarPunto(11, 240, 150);
+
             f[6].FinalizarFigura(12);
             f[6].EditarColor("#51320D");
-            //f[6].EditarColor("#FFFFFF");
+
 
             // Figura 8 - Dignidad      
             f[7] = new ClaseFigura();
@@ -684,7 +681,7 @@ namespace WpfApplication1
             f[7].AgregarPunto(14, 250, 240);
             f[7].FinalizarFigura(15);
             f[7].EditarColor("#E2D3C0");
-            //f[7].EditarColor("#FFFFFF");
+
 
         }
 

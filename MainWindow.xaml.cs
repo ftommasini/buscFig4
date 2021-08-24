@@ -261,6 +261,9 @@ namespace WpfApplication1
 
 
             polylineObj.Visibility = Visibility.Visible;        // Se Muestra la Figura en pantalla
+            var converter = new System.Windows.Media.BrushConverter();
+            polylineObj.Fill = (System.Windows.Media.Brush)converter.ConvertFromString("#FFFFFF");
+            polylineObj.Stroke = (System.Windows.Media.Brush)converter.ConvertFromString("#FFFFFF");
 
             if (Config.Familiarizacion==true)      // Solo entra a Familiarizacion si es igual a 1
             {
